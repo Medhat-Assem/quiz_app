@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'widgets/questions_container.dart';
+import 'widgets/questions.dart';
 
 main() => runApp(const MyApp());
 
@@ -17,28 +19,17 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
         home: Scaffold(
       appBar: AppBar(
-        title: Text('Quiz Application'),
-        backgroundColor: Color(0xFFA90E24),
+        title: const Text('Quiz Application'),
+        backgroundColor: const Color(0xFFA90E24),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            Container(
-                width: 350,
-                height: 200,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(15)),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.grey,
-                          blurRadius: 4,
-                          offset: Offset(4, 8))
-                    ]),
-                child: Center(
-                  child: Text('The Question'),
-                )),
+            QuestionsContainer(
+                text: Questions(
+              text: 'Questions',
+            )),
             ElevatedButton(onPressed: null, child: Text('Answer 1')),
             ElevatedButton(onPressed: null, child: Text('Answer 2')),
             ElevatedButton(onPressed: null, child: Text('Answer 3'))
