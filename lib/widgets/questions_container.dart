@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class QuestionsContainer extends StatelessWidget {
+  // ignore: prefer_typing_uninitialized_variables
   var color, shadowColor, text;
   double? width, height, radius, blurRadius, offsetX, offsetY;
   QuestionsContainer(
@@ -31,7 +33,7 @@ class QuestionsContainer extends StatelessWidget {
           ]),
       child: Center(
           child: Padding(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: text,
       )),
     );
